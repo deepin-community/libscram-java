@@ -1,0 +1,3 @@
+version=4
+options="uversionmangle=s/.beta/~beta/" \
+https://github.com/ongres/scram/tags .*/(.*)\.tar\.gz

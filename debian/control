@@ -1,0 +1,40 @@
+Source: libscram-java
+Section: java
+Priority: optional
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Uploaders:
+ Christoph Berg <myon@debian.org>,
+Build-Depends:
+ debhelper-compat (= 13),
+ default-jdk,
+ maven-debian-helper (>= 2.1),
+Build-Depends-Indep:
+ default-jdk-doc,
+ junit4 (>= 4.12),
+ libfindbugs-annotations-java,
+ libmaven-dependency-plugin-java,
+ libmaven-javadoc-plugin-java,
+ libmaven-source-plugin-java,
+ libstringprep-java (<< 2.0),
+Standards-Version: 4.5.0
+Vcs-Git: https://salsa.debian.org/java-team/libscram-java.git
+Vcs-Browser: https://salsa.debian.org/java-team/libscram-java
+Homepage: https://github.com/ongres/scram
+
+Package: libscram-java
+Architecture: all
+Multi-Arch: foreign
+Depends:
+ ${maven:Depends},
+ ${misc:Depends},
+Suggests:
+ libscram-java-doc,
+ ${maven:OptionalDepends},
+Description: Salted Challenge Response Authentication Mechanism
+ SCRAM (Salted Challenge Response Authentication Mechanism) is part of the
+ family of Simple Authentication and Security Layer (SASL, RFC 4422)
+ authentication mechanisms. It is described as part of RFC 5802 and RFC 7677.
+ .
+ This project aims to provide a complete clean-room implementation of SCRAM. It
+ is written in Java and provided in a modular, re-usable way, independent of
+ other software or programs.

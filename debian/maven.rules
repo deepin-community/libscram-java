@@ -1,0 +1,4 @@
+com.ongres.scram common jar s/.*/debian/ * *
+com.ongres.scram client jar s/.*/debian/ * *
+com.ongres.scram parent pom s/.*/debian/ * *
+junit junit jar s/4\..*/4.x/ * *
